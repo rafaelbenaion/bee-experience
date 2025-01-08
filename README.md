@@ -4,8 +4,7 @@
 
 You can play the game here : [https://rafaelbenaion.github.io/bee-experience](https://rafaelbenaion.github.io/bee-experience/)
 
-[![Watch the video](https://i.vimeocdn.com/video/1968489019-7fd084f5e7bb2165ad3ff4606d9c3fedc4d490738e193f258051104f72b9648c-d?mw=2900&mh=1461&q=70)](https://player.vimeo.com/video/1044990346?h=5c0d6c740a)
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/1044990346?h=5c0d6c740a" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+[![Watch the video](assets/video.png)](https://player.vimeo.com/video/1044990346?h=5c0d6c740a)
 
 ---
 
