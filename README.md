@@ -66,30 +66,30 @@ The project is organized as follows:
 
 ```plaintext
 bee-experience/
-├── assets/                # Contains resources such as images and fonts
-│   ├── closed_fist.gif    # GIF showing closed fist gesture
-│   ├── finger_up.gif      # GIF showing pointing up gesture
-│   ├── thumbs_up.gif      # GIF showing thumbs up gesture
-│   └── victory_2fingers.gif # GIF showing victory gesture
-├── js/                    # JavaScript files
-│   ├── assets/            # Additional assets
-│   ├── drawing_utils.js   # Drawing utilities for visualization
-│   ├── hands.js           # Handles hand detection logic
-│   ├── p5.js              # p5.js library
-│   ├── script.js          # Main game logic
-│   ├── sketch.js          # Game setup and rendering logic
-│   ├── vehicle.js         # Handles bee movement logic
-│   └── vision_bundle.js   # Mediapipe integration
-├── libraries/             # External libraries
-│   ├── p5.min.js          # Minified p5.js library
-│   └── p5.sound.min.js    # Minified p5.js sound library
-├── models/                # Pretrained models
-│   └── hand_landmarker.task # Mediapipe hand detection model
-├── wasm/                  # WebAssembly files
-├── game.html              # Game interface
-├── index.html             # Main entry point for the game
-├── README.md              # Project documentation
-└── style.css              # Game styling
+├── assets/                     # Contains resources such as images and fonts
+│   ├── closed_fist.gif         # GIF showing closed fist gesture
+│   ├── finger_up.gif           # GIF showing pointing up gesture
+│   ├── thumbs_up.gif           # GIF showing thumbs up gesture
+│   └── victory_2fingers.gif    # GIF showing victory gesture
+├── js/                         # JavaScript files
+│   ├── assets/                 # Additional assets
+│   ├── drawing_utils.js        # Drawing utilities for visualization
+│   ├── hands.js                # Handles hand detection logic
+│   ├── p5.js                   # p5.js library
+│   ├── script.js               # Main game logic
+│   ├── sketch.js               # Game setup and rendering logic
+│   ├── vehicle.js              # Handles bee movement logic
+│   └── vision_bundle.js        # Mediapipe integration
+├── libraries/                  # External libraries
+│   ├── p5.min.js               # Minified p5.js library
+│   └── p5.sound.min.js         # Minified p5.js sound library
+├── models/                     # Pretrained models
+│   └── hand_landmarker.task    # Mediapipe hand detection model
+├── wasm/                       # WebAssembly files
+├── game.html                   # Game interface
+├── index.html                  # Main entry point for the game
+├── README.md                   # Project documentation
+└── style.css                   # Game styling
 ```
 
 ## Installation
