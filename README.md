@@ -94,7 +94,7 @@ bee-experience/
 ├── index.html             # Main entry point for the game
 ├── README.md              # Project documentation
 └── style.css              # Game styling
-
+```
 
 ## Installation
 
@@ -114,7 +114,7 @@ bee-experience/
    - Open the project directory in Visual Studio Code.
    - Open `index.html`.
    - Right-click on the `index.html` file and select **Open with Live Server** to run the game in your browser.
-```
+
 
 ---
 
