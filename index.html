@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BeExperience - Welcome</title>
+  <style>
+    /* Reset default margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set full height for the body and apply black background */
+    html,
+    body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Container for the entire content */
+    .content-container {
+      width: 90%;
+      max-width: 1200px;
+      text-align: center;
+      z-index: 2; /* Ensures content is above the background bee image */
+      color: #fff; /* White text for contrast against black background */
+    }
+
+    /* START button styling */
+    .start-button {
+      background-color: #ab3433;
+      border: none;
+      padding: 10px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #861211;
+      border-radius: 300px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      margin-bottom: 50px;
+      margin-top: 100px;
+      position: relative;
+      z-index: 3; /* Ensures button is above the background bee image */
+    }
+
+    .start-button:hover {
+      background-color: #ff0000;
+      transform: translateY(-2px);
+    }
+
+    .start-button:active {
+      background-color: #e6b800;
+      transform: translateY(0);
+    }
+
+    /* Responsive adjustments for START button */
+    @media (max-width: 600px) {
+      .start-button {
+        padding: 15px 30px;
+        font-size: 20px;
+      }
+    }
+
+    /* Tutorial Section */
+    .tutorial-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tutorial-title {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #fff;
+      opacity: 0.7;
+    }
+
+    /* Gesture Container Styling */
+    .gesture-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      overflow-x: auto; /* Enables horizontal scrolling on smaller screens */
+      padding-bottom: 20px; /* Adds some padding below the gestures */
+    }
+
+    /* Hide scrollbar for Webkit browsers */
+    .gesture-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Gesture Card Styling */
+    .gesture-card {
+      background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent for visibility against black background */
+      border: 1px solid #555; /* Slightly lighter border */
+      border-radius: 8px;
+      width: 250px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      flex-shrink: 0; /* Prevents the card from shrinking */
+    }
+
+    .gesture-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Gesture Image Styling - Square Aspect Ratio */
+    .gesture-image {
+      width: 100%;
+      padding-top: 100%; /* 1:1 Aspect Ratio */
+      position: relative;
+      margin-bottom: 15px;
+      background-color: #222; /* Dark background to highlight the GIF */
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .gesture-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .gesture-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .gesture-description {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* Optional: Add some spacing at the bottom */
+    .spacer {
+      height: 50px;
+    }
+
+    /* Media Query for Tablets and Larger Screens */
+    @media (max-width: 1200px) {
+      .gesture-container {
+        gap: 20px;
+      }
+
+      .gesture-card {
+        width: 220px;
+        padding: 15px;
+      }
+
+      .gesture-title {
+        font-size: 18px;
+      }
+
+      .gesture-description {
+        font-size: 14px;
+      }
+    }
+
+    /* Animated Red Bees Styling */
+    .bee {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('assets/red_bee.png'); /* Ensure this image exists */
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fly 10s linear infinite;
+      opacity: 0.8;
+      z-index: 1; /* Behind all other content */
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+
+    /* Define multiple bees with different starting positions and animation delays */
+    .bee:nth-child(1) {
+      top: 10%;
+      left: -60px;
+      animation-duration: 12s;
+      animation-delay: 0s;
+    }
+
+    .bee:nth-child(2) {
+      top: 30%;
+      left: -80px;
+      animation-duration: 15s;
+      animation-delay: 2s;
+    }
+
+    .bee:nth-child(3) {
+      top: 50%;
+      left: -70px;
+      animation-duration: 10s;
+      animation-delay: 4s;
+    }
+
+    .bee:nth-child(4) {
+      top: 70%;
+      left: -90px;
+      animation-duration: 13s;
+      animation-delay: 6s;
+    }
+
+    .bee:nth-child(5) {
+      top: 90%;
+      left: -100px;
+      animation-duration: 14s;
+      animation-delay: 8s;
+    }
+
+    /* Keyframes for bee flying animation */
+    @keyframes fly {
+      0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: translateX(50vw) rotate(180deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(100vw) rotate(360deg);
+        opacity: 0.8;
+      }
+    }
+
+    /* Responsive Bee Sizing */
+    @media (max-width: 600px) {
+      .bee {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    /* Central Bee Image Styling */
+    .background-bee {
+      position: absolute;
+      top: 16%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60vw; /* Adjust size as needed */
+      max-width: 230px; /* Prevent it from being too large on very wide screens */
+      height: auto;
+      opacity: 0.3; /* 90% opacity */
+      z-index: 1; /* Behind all other content */
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+
+    /* Optional: Ensure the central bee doesn't overflow on smaller screens */
+    @media (max-width: 300px) {
+      .background-bee {
+        width: 80vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Central Bee Image -->
+  <img src="bee_red.png" alt="BeExperience" class="background-bee">
+
+  <div class="content-container">
+
+    <!-- START Button -->
+<button class="start-button" onclick="startGame()">START</button>
+    <!-- Tutorial Section -->
+    <div class="tutorial-section">
+  
+
+      <h3 class="tutorial-title">
+        This game uses gesture recognition through your webcam.<br>
+        Position yourself in front of your computer with both palms facing the screen so that your webcam can capture your hands.
+      </h3>
+      
+      <div class="gesture-container">
+        <!-- Gesture 1: Pointing Up -->
+        <div class="gesture-card">
+          <div class="gesture-image">
+            <img src="assets/finger_up.gif" alt="Pointing Up Gesture">
+          </div>
+          <h3 class="gesture-title">Pointing Up</h3>
+          <p class="gesture-description">Use this gesture to <b style="color:red;">kill</b> bees with your fingertips.</p>
+        </div>
+
+        <!-- Gesture 2: Closed Fist -->
+        <div class="gesture-card">
+          <div class="gesture-image">
+            <img src="assets/closed_fist.gif" alt="Closed Fist Gesture">
+          </div>
+          <h3 class="gesture-title">Closed Fist</h3>
+          <p class="gesture-description">Use this gesture to <b style="color:yellow;">attract</b> all bees to your hand palm.</p>
+        </div>
+
+        <!-- Gesture 3: Thumbs Up -->
+        <div class="gesture-card">
+          <div class="gesture-image">
+            <img src="assets/thumbs_up.gif" alt="Thumbs Up Gesture">
+          </div>
+          <h3 class="gesture-title">Thumbs Up</h3>
+          <p class="gesture-description">Use this gesture to <b style="color:green;">repel</b> all the bees around your thumb.</p>
+        </div>
+
+        <!-- Gesture 4: Victory -->
+        <div class="gesture-card">
+          <div class="gesture-image">
+            <img src="assets/victory_2fingers.gif" alt="Victory Gesture">
+          </div>
+          <h3 class="gesture-title">Victory</h3>
+          <p class="gesture-description">Use this gesture to trigger more bee <b style="color:purple;">spawn</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional: Add some spacing at the bottom -->
+  <div class="spacer"></div>
+
+  <!-- Start Game Function -->
+  <script>
+    function startGame() {
+      // Add fade-out effect
+      document.body.style.transition = "opacity 0.5s ease";
+      document.body.style.opacity = "0";
+
+      // Redirect after the transition
+      setTimeout(() => {
+        window.location.href = "game.html";
+      }, 600); // Duration matches the CSS transition
+    }
+  </script>
+</body>
+
+</html>

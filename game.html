@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BeExperience</title>
+  <style>
+    /* Bee Counters Interface Styling */
+    #bee-counters {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid #aaaaaa;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      width: 180px; /* Increased width to accommodate the Blue Bee counter */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bee-counter {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .bee-counter img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .bee-counter span {
+      font-size: 25px;
+      font-weight: bold;
+      color: #000; /* Black text for better visibility */
+    }
+
+    /* Remove bottom margin for the last counter */
+    .bee-counter:last-child {
+      margin-bottom: 20px; /* Increased space before the button */
+    }
+
+    /* STOP GAME button styling */
+    #stop-game-button {
+      width: 100%;
+      padding: 8px 0;
+      background-color: #ab3433; /* Match the START button's color */
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    #stop-game-button:hover {
+      background-color: #ff0000; /* Bright red on hover */
+      transform: translateY(-2px);
+    }
+
+    #stop-game-button:active {
+      background-color: #e60000; /* Darker red on active */
+      transform: translateY(0);
+    }
+    body{
+        margin : 0px !important;
+    }
+
+    html {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="canvas"></div>
+
+  <!-- Bee Counters Interface with STOP GAME Button -->
+  <div id="bee-counters">
+    <div class="bee-counter">
+      <img src="js/assets/bee.png" alt="Normal Bee">
+      <span id="normal-bee-count">0</span>
+    </div>
+    <div class="bee-counter">
+      <img src="js/assets/bee_red.png" alt="Red Bee">
+      <span id="red-bee-count">0</span>
+    </div>
+    <div class="bee-counter">
+      <img src="js/assets/bee_blue.png" alt="Blue Bee"> <!-- Blue Bee Icon -->
+      <span id="blue-bee-count">0</span> <!-- Blue Bee Counter -->
+    </div>
+    <!-- STOP GAME Button -->
+    <button id="stop-game-button" onclick="stopGame()">STOP GAME</button>
+  </div>
+
+  <!-- Include JS libraries -->
+  <script src="./js/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="./js/hands.js" crossorigin="anonymous"></script>
+  <script src="./js/p5.js"></script>
+  <script src="./js/vehicle.js"></script>
+  <script src="./js/sketch.js"></script>
+
+  <script type="module" src="./js/script.js"></script>
+
+  <!-- Stop Game Function -->
+  <script>
+    function stopGame() {
+      // Add fade-out effect
+      document.body.style.transition = "opacity 0.5s ease";
+      document.body.style.opacity = "0";
+
+      // Redirect after the transition
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 500); // Duration matches the CSS transition
+    }
+  </script>
+</body>
+
+</html>
