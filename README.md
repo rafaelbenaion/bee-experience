@@ -1,5 +1,11 @@
 # Bee Experience
 
+## Play
+
+You can play the game here : [https://rafaelbenaion.github.io/bee-experience](https://rafaelbenaion.github.io/bee-experience/)
+
+---
+
 ## Project Description
 
 Bee Experience is an interactive game developed as part of the Reactive AIs course at the Université Côte d'Azur. This project was created by **Rafael Baptista** under the supervision of Professor **Michel Buffa**. The game uses **MediaPipe** technology for gesture recognition, offering a unique and immersive experience. This project explores the use of reactive AIs to create natural interactions between players and the game.
