@@ -4,6 +4,8 @@
 
 You can play the game here : [https://rafaelbenaion.github.io/bee-experience](https://rafaelbenaion.github.io/bee-experience/)
 
+[![Watch the video](https://img.youtube.com/vi/1044990346/0.jpg)](https://player.vimeo.com/video/1044990346?h=5c0d6c740a)
+
 ---
 
 ## Project Description
