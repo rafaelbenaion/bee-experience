@@ -130,9 +130,3 @@ bee-experience/
 ## Author
 
 This project was designed and developed by **Rafael Baptista** as part of the **Reactive AIs** course at Université Côte d'Azur, led by **Michel Buffa**.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
