@@ -67,10 +67,6 @@ The project is organized as follows:
 ```plaintext
 bee-experience/
 ├── assets/                # Contains resources such as images and fonts
-│   ├── bee_blue.png       # Blue bee image
-│   ├── bee_red.png        # Red bee image
-│   ├── bee.png            # Default bee image
-│   ├── bee2.png           # Alternate bee image
 │   ├── closed_fist.gif    # GIF showing closed fist gesture
 │   ├── finger_up.gif      # GIF showing pointing up gesture
 │   ├── thumbs_up.gif      # GIF showing thumbs up gesture
